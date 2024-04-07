@@ -1,6 +1,7 @@
 import { Button, Form, Input, Select, HeaderContainer, Header, Image, InputContainer } from './estilos';
 import Laptop from './assets/Laptop.png';
 import { useState } from 'react';
+
 import './App.css';
 
 
@@ -23,16 +24,20 @@ function Formulario () {
       console.log('Precio:', precio);
     }
      return (
-        <div>
-            <HeaderContainer>
-    <Header>Formulario <b>de Prueba</b></Header>
+    <div className="formulario_container"> 
+    <div className="formulario-header">
+    <HeaderContainer>
+    <Header>Formulario <b> de Prueba</b></Header>
+    
     </HeaderContainer>
-    {/* carga la imagen */}
     <Image src={Laptop} alt="Laptop" className='laptop'/>
-    {/* formulario */}
+    </div>
+    
+    
+    
 
     <Form onSubmit={handleSubmit}>
-      {/* Titulo que diga Datos del vendedor */}
+     
       
       <h3 className="subtitulo"> Nuevo Formulario</h3>
      

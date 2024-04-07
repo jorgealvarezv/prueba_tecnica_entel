@@ -4,10 +4,7 @@ import styled from 'styled-components';
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  width: 750px;
-  //height: 100px;
-  margin: 110px auto;
-  margin-top: -100px;
+  width: 60%;
 `;
 const InputContainer = styled.div`
   display: flex;
@@ -35,15 +32,17 @@ const Input = styled.input`
 const Select = styled.select`
   margin-top: 10px;
   margin-bottom: -10px;
-  padding: 5px;
+  padding: 2px;
   background-color: #fff;
   border: 2px solid #0540F2;
-  margin-right: 19px;
+  //margin-right: 19px;
   color: gray;
   overflow: visible;
   border-radius: 5px;
   height: 39px;
   position: relative;
+  //espacio entre los inputs
+  margin-right: 15px;
 `;
 
 const Button = styled.button`
@@ -54,48 +53,38 @@ const Button = styled.button`
   cursor: pointer;
   border-radius:90px;
   width: 150px;
-  height: 40px;
-  margin-left: 600px;  
-  margin-top: 10px;
+  height: 50px;
+  margin-left: 53rem;  
+  margin-top: 1rem;
 `;
 
 const HeaderContainer = styled.div`
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  border-bottom: 3px solid rgba(128, 128, 128, 0.1);
-  padding-bottom: 40px;
-  margin-top: -35px;
+  justify-content: center;
+  align-items: center;
+ 
 `;
 
 const Header = styled.header`
-  //background-color: #fff;
+  width: 60%;
   color: #0540F2;
-  //padding: 10px;
-  text-align: center;
-  font-size: 40px;
   text-align: left;
-  //centrar entre arriba y abajo
-  margin-top: 120px;
-  margin-left: 70px;
-  margin-bottom: 30px;
+  font-size: 3.5rem;
+  
+  
 `;
 
 const PageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  width: 1100px;
-    margin: 0 auto;
+margin: 0;
 `;
 
 const Navbar = styled.nav`
   display: flex;
-  justify-content: right;
-  padding: 30px;
   #background-color: #fff;
   color: white;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1); /* Agrega la sombra en la parte inferior */
-  width: 1000px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3); /* Agrega la sombra en la parte inferior */
+  width: 100%;
 `;
 
 const ButtonNav = styled.button`
@@ -103,24 +92,29 @@ color: #0540F2;
 border: none;
 cursor: pointer;
 border-radius:90px;
-
 background-color: ${({ selected }) => (selected ? 'rgba(0, 0, 0, 0.05)' : 'transparent')};
-margin-left: 10px;
-margin-right: 10px;
-padding: 10px;
-width: 150px;
-height: 40px;
-margin-top: 10px;
-border : 2px white;
+padding: 1vh;
+margin: 1vh;
+font-size: 0.8rem;
 outline: none;
 &:focus {
-  outline: none; /* Asegurarse de que no aparezca el contorno en estado de enfoque */
+  outline: none;
 }
 `;
 
 const Image = styled.img`
-  margin-left: -900px;
-  max-width: 100px; /* Ajusta el ancho máximo de la imagen según sea necesario */
+width: 25%;
+display: flex;
+justify-content: center;
+align-items: end;
+margin-bottom: -5.5%;
+margin-right: 15%;
 `;
 
-export { Form, InputContainer, Input, Select, Button, HeaderContainer, Header, PageContainer, Navbar, ButtonNav, Image };
+const ListaFormularioContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+`;
+
+export { Form, InputContainer, Input, Select, Button, HeaderContainer, Header, PageContainer, Navbar, ButtonNav, Image, ListaFormularioContainer};
