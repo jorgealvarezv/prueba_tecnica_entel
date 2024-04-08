@@ -6,6 +6,8 @@ import { NavegationBar } from './Navbar';
 import { Formulario } from './Formulario';
 import { Listaformulario } from './Listaformulario';
 import { useState } from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
 
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
 
   return (
     //pon los botones uno al lado del otro no debajo
+    <Provider store={store}>
     <PageContainer>
     {/* create navbar */}
     <NavegationBar onSelectView={setSelectedView} /> {/* Pasa la función para actualizar el estado al componente de navegación */}
@@ -23,6 +26,7 @@ function App() {
 
 
     </PageContainer>
+    </Provider>
   );
 }
 export default App;

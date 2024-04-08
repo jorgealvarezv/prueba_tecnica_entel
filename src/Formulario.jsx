@@ -1,6 +1,8 @@
 import { Button, Form, Input, Select, HeaderContainer, Header, Image, InputContainer } from './estilos';
 import Laptop from './assets/Laptop.png';
 import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { guardarDatos } from './actions';
 
 import './App.css';
 
@@ -12,6 +14,8 @@ function Formulario () {
     const [marca, setMarca] = useState('');
     const [modelo, setModelo] = useState('');
     const [precio, setPrecio] = useState('');
+    const dispatch = useDispatch();
+    const datosFormulario = useSelector((state) => state.datosFormulario);
     
   
     const handleSubmit = (e) => {
@@ -22,6 +26,17 @@ function Formulario () {
       console.log('Marca:', marca);
       console.log('Modelo:', modelo);
       console.log('Precio:', precio);
+      const formData = {
+        nombre,
+        rut,
+        patente,
+        marca,
+        modelo,
+        precio,
+      };
+      dispatch(guardarDatos(formData));
+      console.log('Datos enviados a Redux:', formData);
+      //console.log('Estado actual de la tienda:', datosFormulario);
     }
      return (
     <div className="formulario_container"> 
