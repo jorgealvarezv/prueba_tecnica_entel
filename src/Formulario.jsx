@@ -3,7 +3,7 @@ import Laptop from './assets/Laptop.png';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { guardarDatos } from './actions';
-
+import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 
 
@@ -27,6 +27,7 @@ function Formulario () {
       console.log('Modelo:', modelo);
       console.log('Precio:', precio);
       const formData = {
+        id: uuidv4(),
         nombre,
         rut,
         patente,
@@ -37,6 +38,12 @@ function Formulario () {
       dispatch(guardarDatos(formData));
       console.log('Datos enviados a Redux:', formData);
       //console.log('Estado actual de la tienda:', datosFormulario);
+      setNombre('');
+      setRut('');
+      setPatente('');
+      setMarca('');
+      setModelo('');
+      setPrecio('');
     }
      return (
     <div className="formulario_container"> 

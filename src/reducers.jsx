@@ -1,4 +1,3 @@
-// reducers.js
 import { combineReducers } from 'redux';
 
 const initialState = {
@@ -11,6 +10,11 @@ const formReducer = (state = initialState, action) => {
       return {
         ...state,
         formulariosEnviados: [...state.formulariosEnviados, action.payload],
+      };
+    case 'ELIMINAR_REGISTRO':
+      return {
+        ...state,
+        formulariosEnviados: state.formulariosEnviados.filter((_, index) => index !== action.payload),
       };
     default:
       return state;

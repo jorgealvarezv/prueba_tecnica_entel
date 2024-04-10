@@ -68,3 +68,44 @@
   align-items: center;
   width: 100%;
 }
+.table-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+table {
+ 
+  /* center */
+  margin-left: auto;
+  margin-right: auto;
+  /* espacio entre columnas */
+ 
+
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center; /* Centra el texto en las celdas */
+  border-bottom: 1px solid #ddd; /* Borde inferior de 1px */
+  /* linea continua en el borde */
+  border-collapse: collapse;
+  
+}
+tbody
+{
+  width: auto;
+}
+
+
+th {
+  font-size: 20px;
+}
+
+
+
+
+/* Estilos específicos para la imagen de eliminar */
+.eliminar-btn {
+  cursor: pointer;
+}
